@@ -1,0 +1,80 @@
+ 
+<html>
+  <head>
+    <title>Hand signs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+  <div class="container">
+  
+    <center>
+
+      <h3 class="btn heading" style="background-color: black;">HAND SIGNS APP 
+        <br>
+        <span>&#128516;</span>
+        <span>&#128530;</span>
+        <span>&#128531;</span>
+        <span>&#128548;</span>
+        <span>&#128540;</span>
+      </h3>
+<br>
+      <b style="font-size: 22px;">Take an image to find out which sign it is
+      	<br> <br>
+        <b style="color: rgb(195, 134, 197)"> letter A?</b>
+        <br>
+        <b style="color: rgb(133, 129, 197)"> Letter D?</b>
+        <br>
+        <b style="color: rgb(255, 101, 101)"> Letter F?</b>
+        <br>
+      </b>
+
+      <div class="col-md-4 col-sm-12 col-xs-12">
+	      <label>Webcam- </label>
+        <div id="camera"></div>   
+        <br><br>
+        <button onclick="take_snapshot()" class="btn btn-success">Take Snapshot</button>
+        <br> <br>
+      </div>
+    
+
+      <div class="col-md-4 col-sm-12 col-xs-12">
+        <label>Prediction 1</label>
+        <p class="emotion_name" id="result_emotion_name"></p>
+        <p class="emoji" id="result_emoji"></p>
+        <br> 
+        <label>Prediction 2</label>
+        <p class="emotion_name" id="result_emotion_name2"></p>
+        <p class="emoji" id="result_emoji2"></p>
+
+
+      </div>
+
+      <div class="col-md-4 col-sm-12 col-xs-12">
+        <label>Image</label>
+        <div id="result"></div>
+        <br><br>
+        <button onclick="compare()" class="btn btn-success">Identify Hand Sign</button>
+<br> <br>
+      </div>
+      <br> <br>
+
+
+    </center>
+
+  </div>
+
+<script src="main.js"></script>
+
+  </body>
+</html>
+
+ 
